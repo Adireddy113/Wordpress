@@ -1,0 +1,91 @@
+//CSS for Styling
+
+<style>
+h2 {
+text-align:center; }
+
+#name {
+width:300px;
+height:40px;
+}
+
+#rating {
+padding:5px;
+}
+
+#message {
+width:500px;
+height:250px;
+}
+
+#feedbackform {
+text-align:center;
+padding:5px;
+border:3px;
+font-weight:bold;
+font-size: 18px;
+}
+
+.preview {
+text-align:center;
+}
+</style>
+
+//HTML code for User Inputs
+
+<div>
+<h2>Feedback Form</h2><br>
+<form id ="feedbackform">
+
+<label for ="name">Name</label><br>
+<input type ="text" id="name" name="Name"><br><br>
+
+<label for ="rating">Rating</label><br>
+<input type ="radio" name="rating" value="5">5
+<input type ="radio" name="rating" value="4">4
+<input type ="radio" name="rating" value="3">3
+<input type ="radio" name="rating" value="2">2
+<input type ="radio" name="rating" value="1">1<br><br>
+
+<label for = "message">Message(Optional)</label><br>
+<textarea id="message" name="Message" rows="4" cols="30"></textarea><br><br>
+
+<button type ="submit">Submit Now</button>
+</form>
+
+<div class="preview">
+<h2>Results</h2><br>
+<p id="name-res">Name</p>
+<p id="rating-res">Rating</p>
+<p id ="message-res">Message</p>
+</div>
+
+//JavaScript for Handling the Inputs
+
+<script>
+let nameinp =document.getElementById("name");
+let messageinp =document.getElementById("message");
+
+nameinp.addEventListener("input",() => {
+document.getElementById("name-res").innerText="Name: " + (nameinp.value || "-"); });
+
+
+messageinp.addEventListener("input", () => {
+document.getElementById("message-res").innerText= "Message: " + (messageinp.value || "-"); });
+
+let ratinginp = document.getElementsByName("rating");
+  ratinginp.forEach(radio => {
+    radio.addEventListener("change", () => {
+      document.getElementById("rating-res").innerText = "Rating: " + radio.value;
+    });
+  });
+
+
+document.getElementById("feedbackform").addEventListener("submit", function(e) {
+e.preventDefault();
+alert("Form Submitted Thank You");
+});
+
+
+
+</script>
