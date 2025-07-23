@@ -1,25 +1,25 @@
 <?php
 /*
-Plugin Name: Simple Contact Plugin
+Plugin Name: 1 Task Basic Form
 Description: It's Just a simple contact form Plugin with a Shortcode
 Version: 1.0
 Author: Adireddy
 License: GPLv2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: simple-contact-plugin
+Text Domain: 1-task-basic-form
 */
 
 defined('ABSPATH') or die('U cant access this file in Browser');
 
-add_shortcode('simple_contact', 'simple_contact_plugin');
+add_shortcode('simple_contact_form', 'simple_contact');
 
-function simple_contact_plugin() {
+function simple_contact() {
 ob_start();
-contact();
+form_handle();
 return ob_get_clean();
 }
 
-function contact() {
+function form_handle(){
 echo '<style>
 h2 {
 text-align:center;
