@@ -36,7 +36,7 @@ echo '<input type ="text" id="name" name="Name"><br><br>';
 echo '<label for ="email">Email</label><br>';
 echo '<input type ="email" id="email" name="Email"><br><br>';
 echo '<label for ="issue"> Explain Issue</label><br>';
-echo '<textarea name="issue" rows="10" cols="20"></textarea><br><br>';
+echo '<textarea id="name" name="issue" rows="10" cols="20"></textarea><br><br>';
 echo '<input type ="submit" value="Submit">';
 echo '</form>';
 }
