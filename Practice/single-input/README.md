@@ -1,36 +1,30 @@
-A simple WordPress plugin that adds form with one input field and saves data to the database.
+## Simple Input Form – WordPress Plugin
 
-= Learning Outcomes =
+This is a basic WordPress plugin I created as part of my learning journey. The plugin adds a form with one input field and saves the submitted value to a custom database table.
 
-1. How to create a plugin and its requirements
-   -- plugin header
-   -- security line
+### What I Learned
 
-2. How and when to use built-in hooks like [register_activation_hook]
+* How to create a WordPress plugin with the required header and a security check.
+* How and when to use WordPress hooks like `register_activation_hook`.
+* How to create a new database table using `$wpdb` and `dbDelta()`.
+* How to use shortcodes to display custom content in posts or pages.
+* How to handle form submissions:
 
-3. How to create a database table through plugin
-   -- mainly global $wpdb is used to interact with database
-   -- also dbDelta() is used to run sql queries safely
+### Languages Used
 
-4. How to use and work with shortcodes
+* PHP (for plugin logic)
+* HTML (for the form)
+* CSS (optional styling)
 
-5. How to handle forms
-   -- check for submission
-   -- sanitize the inputs
-   -- insert the data to database table 
+### How to Use
 
-6. Languages used
-   -- HTML
-   -- CSS
-   -- PHP
+1. Install and activate the plugin in WordPress.
+2. Use the shortcode `[simple_input_form]` on any page or post.
+3. It will show a form with a single input box.
+4. When someone submits the form, the value is saved into the database.
 
+### Features
 
-= How to Use =
-
-1. Install and activate the plugin.
-2. Add the shortcode [simple_input_form] to any post or page.
-
-= Features =
-
-1. One simple input field  
-2. Saves data to database    
+* A simple input form
+* Clean and easy to use
+* Data is stored securely in the WordPress database
